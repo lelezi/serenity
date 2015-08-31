@@ -78,6 +78,8 @@ include_directories(
     ${pbjson_SOURCE_DIR}/src/
     ${MESOS_INSTALLATION_DIR}/include
     ${CMAKE_BINARY_DIR}/
+    ${MESOS_INSTALLATION_DIR}/3rdparty/libprocess/3rdparty/protobuf-2.5.0/src/
+    ${MESOS_INSTALLATION_DIR}/3rdparty/libprocess/3rdparty/boost-1.53.0/
 )
 
 set(SERENITY_SOURCES
