@@ -68,6 +68,8 @@ add_library(pbjson ${pbjson_SOURCE_DIR}/src/pbjson.cpp)
 target_link_libraries(pbjson protobuf)
 
 link_directories(${MESOS_INSTALLATION_DIR}/lib/)
+link_directories(${MESOS_INSTALLATION_DIR}/src/.libs/)
+link_directories(${MESOS_INSTALLATION_DIR}/3rdparty/libprocess/3rdparty/glog-0.3.3/.libs)
 
 include_directories(
     ./
@@ -80,6 +82,10 @@ include_directories(
     ${CMAKE_BINARY_DIR}/
     ${MESOS_INSTALLATION_DIR}/3rdparty/libprocess/3rdparty/protobuf-2.5.0/src/
     ${MESOS_INSTALLATION_DIR}/3rdparty/libprocess/3rdparty/boost-1.53.0/
+    ${MESOS_INSTALLATION_DIR}/3rdparty/libprocess/3rdparty/stout/include/
+    ${MESOS_INSTALLATION_DIR}/3rdparty/libprocess/3rdparty/glog-0.3.3/src/
+    ${MESOS_INSTALLATION_DIR}/3rdparty/libprocess/include/
+    ${MESOS_INSTALLATION_DIR}/3rdparty/libprocess/3rdparty/picojson-4f93734/
 )
 
 set(SERENITY_SOURCES
